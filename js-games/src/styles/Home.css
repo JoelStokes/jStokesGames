@@ -1,0 +1,10 @@
+/* Styling that only occurs on the Homepage */
+
+.Title {
+    font-weight: "1000"
+}
+
+.Grid {
+    min-height: '100vh';
+    min-width: '90vh';
+}

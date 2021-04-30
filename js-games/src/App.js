@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './styles/Main.css';
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,15 +7,28 @@ import {
   Redirect
 } from "react-router-dom";  
 
+import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
 import Home from './pages/Home';
 
 function App() {
+
+  const theme = createMuiTheme({
+    typography: {
+      fontFamily: 'Khula',
+      h4: {
+        fontFamily: 'Raleway'
+      }
+    },});
+
   return (
     <Router>
-      <div className="App">
-        Coming Soon
-        <Home/>
-      </div>
+      <ThemeProvider theme={theme}>
+        <div className="App">
+          Coming Soon
+          <Home/>
+        </div>
+      </ThemeProvider>
     </Router>
   );
 }
