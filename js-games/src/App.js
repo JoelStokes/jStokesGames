@@ -10,6 +10,11 @@ import {
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 import Home from './pages/Home';
+import SoloGame from './pages/SoloGame';
+import TeamGame from './pages/TeamGame';
+import Work from './pages/Work';
+import Contact from './pages/Contact';
+import Navbar from './components/Navbar';
 
 function App() {
 
@@ -25,7 +30,7 @@ function App() {
     <Router>
       <ThemeProvider theme={theme}>
         <div className="App">
-          Coming Soon
+          <Navbar/>
           <Home/>
         </div>
       </ThemeProvider>
