@@ -7,8 +7,6 @@ import {
   Redirect
 } from "react-router-dom";  
 
-import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-
 import Home from './pages/Home';
 import SoloGame from './pages/SoloGame';
 import TeamGame from './pages/TeamGame';
@@ -18,22 +16,19 @@ import Navbar from './components/Navbar';
 
 function App() {
 
-  const theme = createMuiTheme({
-    typography: {
-      fontFamily: 'Khula',
-      h4: {
-        fontFamily: 'Raleway'
-      }
-    },});
-
   return (
     <Router>
-      <ThemeProvider theme={theme}>
-        <div className="App">
-          <Navbar/>
-          <Home/>
-        </div>
-      </ThemeProvider>
+      <Navbar/>
+      <Route exact path="/">
+        <Redirect to="/home"/>
+      </Route>
+      <Switch>
+        <Route exact path="/home" component={Home} />
+        <Route exact path="/solo-games" component={SoloGame} />
+        <Route exact path="/team-games" component={TeamGame} />
+        <Route exact path="/professional" component={Work} />
+        <Route exact path="/contact" component={Contact} />
+      </Switch>
     </Router>
   );
 }

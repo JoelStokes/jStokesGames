@@ -48,15 +48,9 @@ function Home() {
                 </Slide>
             </Grid>
             <Grid item xs={12}  /*2nd Grid Slide causing 1st to readjust?*/>
-                <Slide direction="up" in={subtitleFade} mountOnEnter unmountOnExit timeout={effects.durations.slide}>
-                    <div>
-                        <Fade in={subtitleFade} timeout={effects.durations.fade}>
-                            <Typography Typography variant="h4" component="h5" gutterBottom>
-                                Front-End Developer, Game Designer, Programmer
-                            </Typography>
-                        </Fade>
-                    </div>
-                </Slide>
+                <Typography variant="h4" component="h5" gutterBottom className="Typewriter">
+                    Front-End Developer, Game Designer, Programmer
+                </Typography>
             </Grid>
         </Grid>
     )
