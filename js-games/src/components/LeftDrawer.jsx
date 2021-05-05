@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom";
-import { List, ListItem, ListItemIcon, ListItemText, Drawer, Divider } from '@material-ui/core';
+import { List, ListItem, ListItemIcon, ListItemText, Drawer, Divider, Button, Grid, Icon } from '@material-ui/core';
+import { Link as MUILink } from '@material-ui/core';
 
 import {
     Switch,
@@ -16,7 +17,7 @@ import SoloIcon from '@material-ui/icons/Gamepad';
 
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import ItchIcon from '../images/itch-io-icon.png';
+import ItchIcon from '../images/itch-io-icon.svg';
 
 export default class LeftDrawer extends React.Component {
     constructor(props) {
@@ -44,31 +45,46 @@ export default class LeftDrawer extends React.Component {
                   onRequestChange={(open) => this.setState({open})}
               >
                 <List component="nav">
-                    <ListItem button>
+                    <ListItem button
+                        component={Link} 
+                        to="/home" 
+                    >
                     <ListItemIcon>
                         <HomeIcon />
                     </ListItemIcon>
                     <ListItemText primary="Home" />
                     </ListItem>
-                    <ListItem button>
+                    <ListItem button
+                        component={Link} 
+                        to="/solo-games" 
+                    >
                     <ListItemIcon>
                         <SoloIcon />
                     </ListItemIcon>
                     <ListItemText primary="Solo Game Dev" />
                     </ListItem>
-                    <ListItem button>
+                    <ListItem button
+                        component={Link} 
+                        to="/team-games" 
+                    >
                     <ListItemIcon>
                         <TeamIcon />
                     </ListItemIcon>
                     <ListItemText primary="Team Game Dev" />
                     </ListItem>
-                    <ListItem button>
+                    <ListItem button
+                        component={Link} 
+                        to="/professional" 
+                    >
                     <ListItemIcon>
                         <WorkIcon />
                     </ListItemIcon>
                     <ListItemText primary="Professional" />
                     </ListItem>
-                    <ListItem button>
+                    <ListItem button
+                        component={Link} 
+                        to="/contact" 
+                    >
                     <ListItemIcon>
                         <ContactIcon />
                     </ListItemIcon>
@@ -77,19 +93,39 @@ export default class LeftDrawer extends React.Component {
                 </List>
                 <List className="drawerBottom">
                     <Divider />
-                    <ListItem button>
-                    <ListItemIcon>
-                        <LinkedInIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="LinkedIn" />
+
+                    <ListItem button 
+                        component={MUILink}
+                        target="_blank" 
+                        href="https://www.linkedin.com/in/joel-stokes-2486536b/"
+                        style={{ color: 'inherit'}}>
+                        <ListItemIcon>
+                            <LinkedInIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="LinkedIn" />
                     </ListItem>
-                    <ListItem button>
-                    <ListItemIcon>
-                        <GitHubIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="Github" />
+                    <ListItem button 
+                        component={MUILink}
+                        target="_blank" 
+                        href="https://github.com/jstokesVMASC"
+                        style={{ color: 'inherit'}}>
+                        <ListItemIcon>
+                            <GitHubIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Github" />
                     </ListItem>
-                    <img src={ItchIcon} className='outsideIcon' alt="ItchIO" />
+                    <ListItem button 
+                        component={MUILink}
+                        target="_blank" 
+                        href="https://jstokesgames.itch.io/"
+                        style={{ color: 'inherit'}}>
+                        <ListItemIcon>
+                            <Icon className='iconHolder'>
+                                <img src={ItchIcon} className='outsideIcon'/>
+                            </Icon>
+                        </ListItemIcon>
+                        <ListItemText primary="Itch.io" />
+                    </ListItem>                
                 </List>
               </Drawer>
           </div>
