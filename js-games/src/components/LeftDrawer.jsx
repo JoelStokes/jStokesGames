@@ -47,7 +47,8 @@ export default class LeftDrawer extends React.Component {
                 <List component="nav">
                     <ListItem button
                         component={Link} 
-                        to="/home" 
+                        to="/home"
+                        onClick={this.handleClose}
                     >
                     <ListItemIcon>
                         <HomeIcon />
@@ -56,7 +57,8 @@ export default class LeftDrawer extends React.Component {
                     </ListItem>
                     <ListItem button
                         component={Link} 
-                        to="/solo-games" 
+                        to="/solo-games"
+                        onClick={this.handleClose}
                     >
                     <ListItemIcon>
                         <SoloIcon />
@@ -65,7 +67,8 @@ export default class LeftDrawer extends React.Component {
                     </ListItem>
                     <ListItem button
                         component={Link} 
-                        to="/team-games" 
+                        to="/team-games"
+                        onClick={this.handleClose}
                     >
                     <ListItemIcon>
                         <TeamIcon />
@@ -74,7 +77,8 @@ export default class LeftDrawer extends React.Component {
                     </ListItem>
                     <ListItem button
                         component={Link} 
-                        to="/professional" 
+                        to="/professional"
+                        onClick={this.handleClose}
                     >
                     <ListItemIcon>
                         <WorkIcon />
@@ -83,7 +87,8 @@ export default class LeftDrawer extends React.Component {
                     </ListItem>
                     <ListItem button
                         component={Link} 
-                        to="/contact" 
+                        to="/contact"
+                        onClick={this.handleClose}
                     >
                     <ListItemIcon>
                         <ContactIcon />

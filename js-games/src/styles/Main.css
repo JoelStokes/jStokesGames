@@ -3,3 +3,15 @@
 .App {
     text-align: center;
 }
+
+.HeaderSpacing{
+    padding-top: 10vh;
+}
+
+.CardBody{
+    flex-grow: '1';
+    padding: '8px';
+    text-align: 'center';
+    align-items: center;
+}
+  
