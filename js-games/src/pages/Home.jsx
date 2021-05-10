@@ -54,7 +54,7 @@ function Home() {
                     <Slide direction="up" in={titleFade} mountOnEnter unmountOnExit timeout={effects.durations.slide}>
                         <div>
                             <Fade in={titleFade} timeout={effects.durations.fade}>
-                                <Typography variant="h1" component="h3" className="Title" style={{textAlign: 'center'}}>
+                                <Typography variant="h3" className="Title" style={{textAlign: 'center'}}>
                                     Joel Stokes   
                                 </Typography>
                             </Fade>

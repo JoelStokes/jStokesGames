@@ -17,22 +17,32 @@ function Footer() {
                 alignItems="center"
                 justify="center"
               >
-                <Grid item xs={2} alignContent="center">
+                <Grid item xs={2} lg={1} justify='center' alignContent="center">
                     <IconButton 
                         component={Link}
                         target="_blank" 
                         href="https://www.linkedin.com/in/joel-stokes-2486536b/"
-                        style={{ color: 'inherit'}}
+                        style={{    //Trying to set as ClassName not working? Even when marked !important??
+                            color: 'inherit',
+                            display: 'flex',
+                            alignItems: 'center',
+                            flexWrap: 'wrap'
+                        }}
                     >
                         <LinkedInIcon/>
                     </IconButton>
                 </Grid>
-                <Grid item xs={2} alignContent="center">
+                <Grid item xs={2} lg={1} justify='center' alignContent="center">
                     <IconButton
                         component={Link}
                         target="_blank" 
                         href="https://github.com/jstokesVMASC"
-                        style={{ color: 'inherit'}}
+                        style={{
+                            color: 'inherit',
+                            display: 'flex',
+                            alignItems: 'center',
+                            flexWrap: 'wrap'
+                        }}
                     >
                         <GitHubIcon/>
                     </IconButton>
