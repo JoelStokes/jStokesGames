@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Typography, Grid, Fade, Slide } from '@material-ui/core';
+import Footer from '../components/Footer'
 import '../styles/Home.css';
 
 function Home() {
@@ -28,31 +29,34 @@ function Home() {
     }
 
     return (
-        <Grid
-            container
-            spacing={0}
-            direction="column"
-            alignItems="center"
-            justify="center"
-            style={{ minHeight: '100vh' }}  //Style not reading properly from Home.css?
-            >
-            <Grid item xs={12} onload={setTimeout(titleTimerElapsed, effects.timers.title)}>
-                <Slide direction="up" in={titleFade} mountOnEnter unmountOnExit timeout={effects.durations.slide}>
-                    <div>
-                        <Fade in={titleFade} timeout={effects.durations.fade}>
-                            <Typography variant="h1" component="h3" className="Title">
-                                Joel Stokes   
-                            </Typography>
-                        </Fade>
-                    </div>
-                </Slide>
+        <>
+            <Grid
+                container
+                spacing={0}
+                direction="column"
+                alignItems="center"
+                justify="center"
+                style={{ minHeight: '100vh' }}  //Style not reading properly from Home.css?
+                >
+                <Grid item xs={12} onload={setTimeout(titleTimerElapsed, effects.timers.title)}>
+                    <Slide direction="up" in={titleFade} mountOnEnter unmountOnExit timeout={effects.durations.slide}>
+                        <div>
+                            <Fade in={titleFade} timeout={effects.durations.fade}>
+                                <Typography variant="h1" component="h3" className="Title">
+                                    Joel Stokes   
+                                </Typography>
+                            </Fade>
+                        </div>
+                    </Slide>
+                </Grid>
+                <Grid item xs={12}  /*2nd Grid Slide causing 1st to readjust?*/>
+                    <Typography variant="h4" component="h5" gutterBottom className="Typewriter">
+                        Front-End Developer & Game Designer
+                    </Typography>
+                </Grid>
             </Grid>
-            <Grid item xs={12}  /*2nd Grid Slide causing 1st to readjust?*/>
-                <Typography variant="h4" component="h5" gutterBottom className="Typewriter">
-                    Front-End Developer, Game Designer, Programmer
-                </Typography>
-            </Grid>
-        </Grid>
+            <Footer/>
+        </>
     )
 }
 

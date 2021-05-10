@@ -18,7 +18,6 @@ function App() {
 
   return (
     <Router>
-      <Navbar/>
       <Route exact path="/">
         <Redirect to="/home"/>
       </Route>
