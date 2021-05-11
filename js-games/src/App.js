@@ -18,11 +18,11 @@ function App() {
 
   return (
     <Router>
-      <Route exact path="/">
-        <Redirect to="/home"/>
+      <Route exact path="/home">
+        <Redirect to="/"/>
       </Route>
       <Switch>
-        <Route exact path="/home" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route exact path="/solo-games" component={SoloGame} />
         <Route exact path="/team-games" component={TeamGame} />
         <Route exact path="/professional" component={Work} />
