@@ -17,18 +17,22 @@ import Navbar from './components/Navbar';
 function App() {
 
   return (
-    <Router>
-      <Route exact path="/home">
-        <Redirect to="/"/>
-      </Route>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/solo-games" component={SoloGame} />
-        <Route exact path="/team-games" component={TeamGame} />
-        <Route exact path="/professional" component={Work} />
-        <Route exact path="/contact" component={Contact} />
-      </Switch>
-    </Router>
+    <div className="Background">
+      <div className="BackgroundCenter">
+        <Router>
+          <Route exact path="/home">
+            <Redirect to="/"/>
+          </Route>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/solo-games" component={SoloGame} />
+            <Route exact path="/team-games" component={TeamGame} />
+            <Route exact path="/professional" component={Work} />
+            <Route exact path="/contact" component={Contact} />
+          </Switch>
+        </Router>
+      </div>
+    </div>
   );
 }
 

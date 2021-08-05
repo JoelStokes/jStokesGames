@@ -36,7 +36,7 @@ function Home() {
         });   
         typewriter 
         .pauseFor(350)
-        .typeString('Front-End Developer & Game Designer')
+        .typeString('Game Designer & Front-End Developer')
         .start();
     }
 
