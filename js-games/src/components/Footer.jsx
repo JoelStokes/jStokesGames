@@ -1,3 +1,5 @@
+//Outdated Footer File used as temp letting people know the actual website is coming soon
+
 import React from 'react'
 import { Typography, Grid, IconButton, Link } from '@material-ui/core';
 import '../styles/Main.css'

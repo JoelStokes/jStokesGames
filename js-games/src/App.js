@@ -13,6 +13,7 @@ import TeamGame from './pages/TeamGame';
 import Work from './pages/Work';
 import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
+import FooterNav from './components/FooterNav';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
             <Route exact path="/contact" component={Contact} />
           </Switch>
         </Router>
+        <FooterNav/>
       </div>
     </div>
   );
