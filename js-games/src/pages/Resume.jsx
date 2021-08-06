@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function Work() {
+function Resume() {
     return(
         <div>
             Work coming soon
@@ -8,4 +8,4 @@ function Work() {
     )
 }
 
-export default Work;
+export default Resume;

@@ -8,28 +8,33 @@ import {
 } from "react-router-dom";  
 
 import Home from './pages/Home';
-import SoloGame from './pages/SoloGame';
-import TeamGame from './pages/TeamGame';
-import Work from './pages/Work';
+import Games from './pages/Games';
+import AboutMe from './pages/AboutMe';
+import Resume from './pages/Resume';
 import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
+import FooterNav from './components/FooterNav';
 
 function App() {
 
   return (
-    <Router>
-      <Navbar/>
-      <Route exact path="/">
-        <Redirect to="/home"/>
-      </Route>
-      <Switch>
-        <Route exact path="/home" component={Home} />
-        <Route exact path="/solo-games" component={SoloGame} />
-        <Route exact path="/team-games" component={TeamGame} />
-        <Route exact path="/professional" component={Work} />
-        <Route exact path="/contact" component={Contact} />
-      </Switch>
-    </Router>
+    <div className="Background">
+      <div className="BackgroundCenter">
+        <Router>
+          <Route exact path="/home">
+            <Redirect to="/"/>
+          </Route>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/games" component={Games} />
+            <Route exact path="/about-me" component={AboutMe} />
+            <Route exact path="/resume" component={Resume} />
+            <Route exact path="/contact" component={Contact} />
+          </Switch>
+          <FooterNav/>
+        </Router>
+      </div>
+    </div>
   );
 }
 

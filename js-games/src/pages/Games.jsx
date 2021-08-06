@@ -3,7 +3,7 @@ import { Card, CardContent, CardMedia, CardHeader, Grid, Paper } from '@material
 import ReactPlayer from 'react-player'
 import '../styles/Main.css';
 
-function SoloGame() {   //Back to Top FAB would be great here 
+function Games() {   //Back to Top FAB would be great here 
     //https://material-ui.com/components/app-bar/#back-to-top
     return(
         <div style={{flexGrow: '1'}}>
@@ -43,4 +43,4 @@ function SoloGame() {   //Back to Top FAB would be great here
     )
 }
 
-export default SoloGame;
+export default Games;
