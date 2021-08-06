@@ -30,6 +30,11 @@
     align-items: 'center' !important;
     flex-wrap: 'wrap' !important;
 }
+
+.PageBody{
+    height: 100vh;
+    width: 100vw;
+}
   
 .Background {
     background-image: url("../images/background.jpg");

@@ -16,9 +16,12 @@ import Navbar from './components/Navbar';
 import FooterNav from './components/FooterNav';
 
 function App() {
+  OnLoad() {
+    this.setState({open: !this.state.open});
+}
 
   return (
-    <div className="Background">
+    <div className="Background" onload={OnLoad}>
       <div className="BackgroundCenter">
         <Router>
           <Route exact path="/home">
