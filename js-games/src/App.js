@@ -15,13 +15,14 @@ import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
 import FooterNav from './components/FooterNav';
 
-function App() {
-  OnLoad() {
-    this.setState({open: !this.state.open});
-}
+import { BackgroundImage } from "react-image-and-background-image-fade";
+import bgImage from "./images/background.jpg";
 
+//The BackgroundImage pluging doesn't seem to start from black... Which is a problem with the theming
+
+function App() {
   return (
-    <div className="Background" onload={OnLoad}>
+    <BackgroundImage src={bgImage} className="Background" transitionTime='2s'>
       <div className="BackgroundCenter">
         <Router>
           <Route exact path="/home">
@@ -37,7 +38,7 @@ function App() {
           <FooterNav/>
         </Router>
       </div>
-    </div>
+    </BackgroundImage>
   );
 }
 
