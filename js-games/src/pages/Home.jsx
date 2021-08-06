@@ -69,7 +69,6 @@ function Home() {
                     </Typography>
                 </Grid>
             </Grid>
-            <Footer/>
         </>
     )
 }

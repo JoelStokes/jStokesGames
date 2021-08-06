@@ -11,6 +11,9 @@ const breakpoints = createBreakpoints({});
 const theme = createMuiTheme({
   palette: {
     type: "dark",
+    primary: {
+        main: '#24FBE0'
+    },
   },  
   typography: {
     fontFamily: 'Khula',

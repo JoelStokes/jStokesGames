@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function TeamGame() {
+function AboutMe() {
     return(
         <div>
             Team Game coming soon
@@ -8,4 +8,4 @@ function TeamGame() {
     )
 }
 
-export default TeamGame;
+export default AboutMe;
