@@ -13,7 +13,7 @@ import AboutMe from './pages/AboutMe';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
-import FooterNav from './components/FooterNav';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -31,7 +31,7 @@ function App() {
             <Route exact path="/resume" component={Resume} />
             <Route exact path="/contact" component={Contact} />
           </Switch>
-          <FooterNav/>
+          <Footer/>
         </Router>
       </div>
     </div>
