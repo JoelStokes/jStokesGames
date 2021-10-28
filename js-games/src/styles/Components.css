@@ -14,3 +14,9 @@
 .iconHolder {
     height: '100%';
 }
+
+.leftImage{
+    max-width: 30%;
+    float: left;
+    padding-bottom: 10px;
+}
