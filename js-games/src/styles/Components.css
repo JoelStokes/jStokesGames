@@ -16,7 +16,15 @@
 }
 
 .leftImage{
-    max-width: 30%;
+    margin: 'auto';
+    display: 'block';
+    max-width: '100%';
+    max-height: '100%';
+}
+
+.leftBox{
+    max-width: 175px;
+    height: auto;
     float: left;
     padding-bottom: 10px;
 }
